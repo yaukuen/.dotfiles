@@ -8,6 +8,26 @@ return require("packer").startup(function()
     use("ellisonleao/gruvbox.nvim")
     use("karb94/neoscroll.nvim")
     use("tversteeg/registers.nvim")
+    --Scroll
     use("petertriho/nvim-scrollbar")
     use("kevinhwang91/nvim-hlslens")
+    --LSP
+    use("neovim/nvim-lspconfig")
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+    --Telescope
+    use {
+        'nvim-telescope/telescope.nvim', branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use("nvim-telescope/telescope-file-browser.nvim")
+    use("kyazdani42/nvim-web-devicons")
+    --Treesitter
+   -- use {
+   --     'nvim-treesitter/nvim-treesitter',
+   --     run = ':TSUpdate'
+   -- }
 end)
