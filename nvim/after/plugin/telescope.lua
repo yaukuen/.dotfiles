@@ -3,6 +3,7 @@ require("telescope").setup{
     defaults = {
         prompt_prefix = "> ",
         selection_caret = "> ",
+        color_devicons = true,
         mappings = {
             i = {
                 ["<c-a>"] = function() print(vim.inspect(action_state.get_selected_entry())) end

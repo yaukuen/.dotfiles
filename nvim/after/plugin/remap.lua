@@ -12,24 +12,23 @@ nnoremap("<leader>pv", ":Ex<CR>")
 --vnoremap("K", ":m '<-2<CR>gv=gv")
 --
 --nnoremap("Y", "yg$")
---nnoremap("n", "nzzzv")
---nnoremap("N", "Nzzzv")
+nnoremap("n", "nzzzv")
+nnoremap("N", "Nzzzv")
 --nnoremap("J", "mzJ`z")
 --nnoremap("<C-d>", "<C-d>zz")
 --nnoremap("<C-u>", "<C-u>zz")
 --
 ---- greatest remap ever
---xnoremap("<leader>p", "\"_dP")
+xnoremap("<leader>p", "\"_dP")
 --
 ---- next greatest remap ever : asbjornHaland
---nnoremap("<leader>y", "\"+y")
---vnoremap("<leader>y", "\"+y")
---nmap("<leader>Y", "\"+Y")
+nnoremap("<leader>y", "\"+y")
+vnoremap("<leader>y", "\"+y")
+nmap("<leader>Y", "\"+Y")
 --
---nnoremap("<leader>d", "\"_d")
---vnoremap("<leader>d", "\"_d")
---
---vnoremap("<leader>d", "\"_d")
+nnoremap("<leader>d", "\"_d")
+vnoremap("<leader>d", "\"_d")
+nmap("<leader>D", "\"_D")
 --
 ---- This is going to get me cancelled
 --inoremap("<C-c>", "<Esc>")
@@ -42,5 +41,11 @@ nnoremap("<leader>pv", ":Ex<CR>")
 --nnoremap("<leader>k", "<cmd>lnext<CR>zz")
 --nnoremap("<leader>j", "<cmd>lprev<CR>zz")
 --
---nnoremap("<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+nnoremap("<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 --nnoremap("<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+nnoremap("<leader>+", ":exe 'resize ' . (winheight(0) * 3/2)<CR>")
+nnoremap("<leader>-", ":exe 'resize ' . (winheight(0) * 2/3)<CR>")
+nnoremap("<leader>v+", ":exe 'vertical resize ' . (winwidth(0) * 3/2)<CR>")
+nnoremap("<leader>v-", ":exe 'vertical resize ' . (winwidth(0) * 2/3)<CR>")
+nnoremap("<leader><esc><esc>", ":nohls<CR>") 

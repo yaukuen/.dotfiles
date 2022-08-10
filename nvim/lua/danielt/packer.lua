@@ -5,12 +5,13 @@ vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function()
     use("wbthomason/packer.nvim")
+    use("sbdchd/neoformat")
     use("ellisonleao/gruvbox.nvim")
-    use("karb94/neoscroll.nvim")
     use("tversteeg/registers.nvim")
-    --Scroll
-    use("petertriho/nvim-scrollbar")
     use("kevinhwang91/nvim-hlslens")
+    --Scroll
+    use("karb94/neoscroll.nvim")
+    use("petertriho/nvim-scrollbar")
     --LSP
     use("neovim/nvim-lspconfig")
     use("hrsh7th/nvim-cmp")
@@ -26,8 +27,9 @@ return require("packer").startup(function()
     use("nvim-telescope/telescope-file-browser.nvim")
     use("kyazdani42/nvim-web-devicons")
     --Treesitter
-   -- use {
-   --     'nvim-treesitter/nvim-treesitter',
-   --     run = ':TSUpdate'
-   -- }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+    use("romgrk/nvim-treesitter-context")
 end)
