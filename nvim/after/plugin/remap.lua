@@ -8,8 +8,8 @@ local nmap = Remap.nmap
 nnoremap("<leader>pv", ":Ex<CR>")
 --nnoremap("<leader>u", ":UndotreeShow<CR>")
 --
---vnoremap("J", ":m '>+1<CR>gv=gv")
---vnoremap("K", ":m '<-2<CR>gv=gv")
+vnoremap("J", ":m '>+1<CR>gv=gv")
+vnoremap("K", ":m '<-2<CR>gv=gv")
 --
 --nnoremap("Y", "yg$")
 nnoremap("n", "nzzzv")
@@ -33,7 +33,7 @@ nmap("<leader>D", "\"_D")
 ---- This is going to get me cancelled
 --inoremap("<C-c>", "<Esc>")
 --
---nnoremap("Q", "<nop>")
+nnoremap("Q", "<nop>")
 --nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 --
 --nnoremap("<C-k>", "<cmd>cnext<CR>zz")

@@ -9,6 +9,12 @@ return require("packer").startup(function()
     use("ellisonleao/gruvbox.nvim")
     use("tversteeg/registers.nvim")
     use("kevinhwang91/nvim-hlslens")
+    --Statusline
+    use("nvim-lualine/lualine.nvim")
+    --Indentation line & whitespaces
+    use("lukas-reineke/indent-blankline.nvim")
+    --Highlighting
+    use("RRethy/vim-illuminate")
     --Scroll
     use("karb94/neoscroll.nvim")
     use("petertriho/nvim-scrollbar")
