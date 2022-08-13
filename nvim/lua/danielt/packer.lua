@@ -7,6 +7,7 @@ return require("packer").startup(function()
     use("wbthomason/packer.nvim")
     use("sbdchd/neoformat")
     use("ellisonleao/gruvbox.nvim")
+    use("folke/tokyonight.nvim")
     use("tversteeg/registers.nvim")
     use("kevinhwang91/nvim-hlslens")
     --Statusline
