@@ -6,6 +6,8 @@ local xnoremap = Remap.xnoremap
 local nmap = Remap.nmap
 
 nnoremap("<leader>pv", ":Ex<CR>")
+nnoremap("<leader>vpv", ":Vex<CR>")
+nnoremap("<leader>spv", ":Sex<CR>")
 --nnoremap("<leader>u", ":UndotreeShow<CR>")
 --
 vnoremap("J", ":m '>+1<CR>gv=gv")

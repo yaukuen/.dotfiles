@@ -19,12 +19,41 @@ return require("packer").startup(function()
     --Scroll
     use("karb94/neoscroll.nvim")
     use("petertriho/nvim-scrollbar")
+    --Comment
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
     --LSP
     use("neovim/nvim-lspconfig")
-    use("hrsh7th/nvim-cmp")
+    use {
+        'hrsh7th/nvim-cmp',
+        config = function ()
+            require'cmp'.setup {
+                snippet = {
+                    expand = function(args)
+                        require'luasnip'.lsp_expand(args.body)
+                    end
+                },
+
+                sources = {
+                    { name = 'luasnip' },
+                    -- more sources
+                },
+            }
+        end
+    }
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-path")
+    use("hrsh7th/cmp-cmdline")
+    use("L3MON4D3/LuaSnip")
+    use("saadparwaiz1/cmp_luasnip")
+    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+    use("onsails/lspkind-nvim")
+    use("simrat39/symbols-outline.nvim")
     --Telescope
     use {
         'nvim-telescope/telescope.nvim', branch = '0.1.x',

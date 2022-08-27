@@ -3,7 +3,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+  sync_install = true,
 
   -- Automatically install missing parsers when entering buffer
   auto_install = true,
