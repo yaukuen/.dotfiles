@@ -3,13 +3,25 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return require("packer").startup(function()
+return require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
+    --Telescope
+    use("nvim-lua/plenary.nvim")
+    use {
+        'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    }
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use("nvim-telescope/telescope-file-browser.nvim")
+    use("kyazdani42/nvim-web-devicons")
     use("sbdchd/neoformat")
     use("ellisonleao/gruvbox.nvim")
     use("folke/tokyonight.nvim")
     use("tversteeg/registers.nvim")
     use("kevinhwang91/nvim-hlslens")
+    --Git
+    use("TimUntersberger/neogit")
+    use("sindrets/diffview.nvim")
+    use("lewis6991/gitsigns.nvim")
     --Statusline
     use("nvim-lualine/lualine.nvim")
     --Indentation line & whitespaces
@@ -51,17 +63,9 @@ return require("packer").startup(function()
     use("hrsh7th/cmp-cmdline")
     use("L3MON4D3/LuaSnip")
     use("saadparwaiz1/cmp_luasnip")
-    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+    use {'tzachar/cmp-tabnine', run='./install.sh'}
     use("onsails/lspkind-nvim")
     use("simrat39/symbols-outline.nvim")
-    --Telescope
-    use {
-        'nvim-telescope/telescope.nvim', branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-    use("nvim-telescope/telescope-file-browser.nvim")
-    use("kyazdani42/nvim-web-devicons")
     --Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
