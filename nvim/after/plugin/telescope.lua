@@ -72,6 +72,7 @@ finders.fd_in_nvim = function()
     local opts = vim.deepcopy(center_list)
     opts.prompt_prefix = "Nvim>"
     opts.cwd = vim.fn.stdpath("config")
+    opts.hidden = true
     require"telescope.builtin".fd(opts)
 end
 
@@ -115,7 +116,7 @@ nnoremap("<leader>vh", function()
     require('telescope.builtin').help_tags()
 end)
 nnoremap("<leader>vrc", function()
-    finders.fd_in_nvim({ hidden = true })
+    finders.fd_in_nvim()
 end)
 nnoremap("<leader>gc", function()
     require("telescope.builtin").git_branches()

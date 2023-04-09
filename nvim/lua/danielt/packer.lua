@@ -72,4 +72,8 @@ return require("packer").startup(function(use)
         run = ':TSUpdate'
     }
     use("romgrk/nvim-treesitter-context")
+    --Language Specific
+    --Golang
+    use("ray-x/go.nvim")
+    use("ray-x/guihua.lua")
 end)
